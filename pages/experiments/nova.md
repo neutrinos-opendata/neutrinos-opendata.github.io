@@ -9,7 +9,7 @@ energy_range: "0.5–5 GeV"
 status: running
 open_data_links:
   - label: "NOvA Open Data (Fermilab)"
-    url: https://nova.fnal.gov/
+    url: https://novaexperiment.fnal.gov/data-releases/
   - label: "Joint NOvA–T2K oscillation analysis (Nature, 2025)"
     url: https://www.nature.com/articles/s41586-025-09599-3
 ---

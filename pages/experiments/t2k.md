@@ -9,7 +9,7 @@ energy_range: "0.5–5 GeV"
 status: running
 open_data_links:
   - label: "T2K Open Data (Zenodo)"
-    url: https://zenodo.org/communities/t2k/
+    url: https://t2k-experiment.org/for-physicists/data-management-plan/
   - label: "Joint NOvA–T2K oscillation analysis (Nature, 2025)"
     url: https://www.nature.com/articles/s41586-025-09599-3
 ---
