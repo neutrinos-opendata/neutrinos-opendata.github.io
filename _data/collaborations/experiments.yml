@@ -1,0 +1,39 @@
+- name: DUNE Experiment
+  short: DUNE
+  url: https://www.dunescience.org
+  description: >-
+    The Deep Underground Neutrino Experiment (DUNE) is a leading-edge, international experiment for neutrino science and proton decay studies.
+
+- name: IceCube Experiment
+  short: IceCube
+  url: https://icecube.wisc.edu
+  description: >-
+    The IceCube Neutrino Observatory is the first detector of its kind, designed to observe the cosmos from deep within the South Pole ice. 
+
+- name: XENON Experiment
+  short: XENON
+  url: http://xenon1t.org
+  description: >-
+    The XENON experiment is a 3500kg liquid xenon detector to search for the elusive Dark Matter. 
+
+- name: ATLAS Experiment
+  short: ATLAS
+  url: https://home.cern/science/experiments/atlas
+  description: >-
+    A general-purpose detector at the Large Hadron Collider (LHC)
+    and after significant upgrades, from 2026, at the High-Luminosity
+    Large Hadron Collider (HL-LHC).
+
+- name: CMS Experiment
+  short: CMS
+  url: https://home.cern/science/experiments/cms
+  description: >-
+    A general-purpose detector at the Large Hadron Collider (LHC)
+    and after significant upgrades, from 2026, at the High-Luminosity
+    Large Hadron Collider (HL-LHC).
+
+- name: LHCb Experiment
+  short: LHCb
+  url: https://home.cern/science/experiments/lhcb
+  description: >-
+    A detector focused on physics using the beauty quark. 

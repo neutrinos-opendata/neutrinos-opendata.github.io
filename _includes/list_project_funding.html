@@ -1,0 +1,17 @@
+
+{% assign funding = "" | split: "," %}
+{% for award in page.awards %}
+    {% assign funding = funding | push: award %}
+{% endfor %}
+
+{% if funding.size > 0 %}
+<h3>Related Funding</h3>
+<div>
+<ul>
+  {% for award in page.awards %}
+    <li style="list-style-type: none;">&nbsp; &nbsp;{{award.type }} {{award.number}}</li>
+  {% endfor %}
+</ul>
+</div>
+<br>
+{% endif %}

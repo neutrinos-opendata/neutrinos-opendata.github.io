@@ -1,0 +1,83 @@
+<!doctype html>
+
+{% include layout_header_navbar.html %}
+
+  <div id="container">
+    <div class="container">
+      <main role="main">
+
+        <div class="row mt-4 mb-2">
+          <div class="col-12">
+            <h1 class="mb-1">{{ page.title }}</h1>
+            {% if page.status %}
+              {% assign status_lower = page.status | downcase %}
+              {% if status_lower == "running" %}
+                <span class="badge bg-success">Running</span>
+              {% elsif status_lower == "completed" %}
+                <span class="badge bg-secondary">Completed</span>
+              {% elsif status_lower == "future" %}
+                <span class="badge bg-info text-dark">Future / In Construction</span>
+              {% else %}
+                <span class="badge bg-light text-dark">{{ page.status }}</span>
+              {% endif %}
+            {% endif %}
+            {% if page.energy_range %}
+              <span class="ms-2 text-muted">Energy range: {{ page.energy_range }}</span>
+            {% endif %}
+          </div>
+        </div>
+
+        {% if page.experiment_photo %}
+        <div class="row mb-4">
+          <div class="col-12">
+            <img src="{{ page.experiment_photo }}" alt="{{ page.title }} detector photo"
+                 class="img-fluid rounded w-100" style="max-height: 400px; object-fit: cover;">
+            {% if page.photo_credit %}
+              <div class="text-muted small mt-1">Photo: {{ page.photo_credit }}</div>
+            {% endif %}
+          </div>
+        </div>
+        {% endif %}
+
+        <div class="row">
+          <div class="col-lg-8">
+            {{ content }}
+          </div>
+
+          <div class="col-lg-4">
+            {% if page.open_data_links %}
+            <div class="card border-primary mb-4">
+              <div class="card-header bg-primary text-white">
+                <strong>Open Data</strong>
+              </div>
+              <ul class="list-group list-group-flush">
+                {% for link in page.open_data_links %}
+                <li class="list-group-item">
+                  <a href="{{ link.url }}" target="_blank" rel="noopener">{{ link.label }}</a>
+                </li>
+                {% endfor %}
+              </ul>
+            </div>
+            {% endif %}
+
+            {% if page.open_data_note %}
+            <div class="card border-warning mb-4">
+              <div class="card-header bg-warning text-dark">
+                <strong>Note</strong>
+              </div>
+              <div class="card-body">
+                <p class="card-text small">{{ page.open_data_note }}</p>
+              </div>
+            </div>
+            {% endif %}
+          </div>
+        </div>
+
+      </main>
+    </div>
+    {% include footer.html %}
+    {% include sub-footer.html %}
+  </div>
+
+  </body>
+</html>

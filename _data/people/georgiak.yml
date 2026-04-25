@@ -1,0 +1,26 @@
+name: Georgia Karagiorgi
+shortname: georgiak
+title: Assistant Professor of Physics
+active: false
+institution: Columbia University
+website: https://www.nevis.columbia.edu/~georgia/
+photo: /assets/images/team/Georgia-Karagiorgi.png
+e-mail: xxx@yyy.zzz
+experiment: MicroBooNE/DUNE
+presentations:
+  - title: "(Fast) Machine Learning for Neutrinos"
+    date: 2019-09-10
+    url: https://indico.cern.ch/event/822126/contributions/3500176/attachments/1905496/3146909/fast_ml_neutrinos.pdf
+    meeting: "Fast Machine Learning Workshop"
+    meetingurl: https://indico.cern.ch/event/822126/
+    location: FNAL
+    project: arris
+    focus-area:
+  - title: "Accelerating Deep Neural Networks For Real-time Data Selection For High-resolution Imaging Particle Detectors"
+    date: 2019-06-13
+    url: https://www.bnl.gov/nysds19/files/talks/Session4/Georgia-Karagiorgi_NYSDS19.pdf
+    meeting: "New York Scientific Data Summit"
+    meetingurl: https://www.bnl.gov/nysds19/
+    location: Columbia University
+    project: arris
+    focus-area:

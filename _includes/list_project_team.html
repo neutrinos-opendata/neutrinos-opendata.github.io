@@ -1,0 +1,23 @@
+<h3>Collaborators Include:</h3>
+
+<div class="container pt-1 pb-3">
+  <div class="row">
+
+{%- for member in include.team -%}
+  {%- assign found=false -%}
+  {%- for person_hash in site.data.people -%}
+    {%- assign person = person_hash[1] -%}
+    {%- if person.shortname == member -%}
+      {%- assign found=true -%}
+    {% include standard_person_card.md %} 
+    {%- endif -%}
+  {%- endfor -%}
+  {%- unless found -%}
+    <li> {{ member }} </li>
+  {%- endunless -%}
+{%- endfor -%}
+  </div>
+{% if page.largeteam and page.largeteam != blank %}
+See the project website for a full listing of the collaborators on this project.
+{% endif %}
+</div>

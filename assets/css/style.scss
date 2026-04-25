@@ -1,0 +1,444 @@
+---
+# this ensures Jekyll reads the file to be transformed into CSS later
+---
+
+@use 'sass:color';
+
+// Brand accent colors — change these two to retheme the site
+$brand-blue:   rgb(28, 46, 78);    // navbar, footer, card headers
+$brand-yellow: rgb(255, 220, 90);  // banner text, navbar border, card bodies, sub-footer
+
+// MK Color Scheme
+$custom-100: #1E3040 !default;  // steel blue
+$custom-200: $brand-blue !default;  // dark blue
+$custom-300: #6A7349 !default;  // dark pea green
+$custom-400: #B4BF5E !default;  // pea green
+$custom-500: #D5D962 !default;  // light pea green
+$custom-600: #402E1E !default;  // #1E3040 complement
+
+// Colors that are used below
+$primary: $custom-100;
+$primary-accent: $brand-yellow;
+$secondary: $custom-500;
+$secondary-accent: $custom-200;
+$tertiary: $custom-300;
+$black: #2f2f41;
+$white: #ffffff;
+$white-offset: #fff6f8;
+$steel: #5C5A5A;
+$dark: $primary;
+
+//--------------------------------------------------------------
+
+// -----------------------------------------------------------------------
+// End custom color schemes
+// -----------------------------------------------------------------------
+
+
+
+// Links
+$link-color: $primary;
+$link-decoration: none;
+$link-hover-color: color.adjust($primary, $lightness: 10%);
+$link-hover-decoration: underline;
+
+// Fonts
+$font-family-base: Helvetica, Arial, sans-serif, -apple-system;
+$font-family-heading: 'Playfair Display', serif, -apple-system;
+
+// Footer
+$footer-background-color: $brand-blue;
+$footer-text-color: $white;
+$sub-footer-background-color: $brand-yellow;
+$sub-footer-text-color: $black;
+
+// Bootstrap 5
+@import 'bootstrap-variables';
+@import 'bootstrap';
+
+
+// Libraries
+@import 'libraries/hamburgers/hamburgers';
+
+// Components
+@import 'components/type';
+@import 'components/page';
+@import 'components/header';
+@import 'components/footer';
+@import 'components/sub-footer';
+@import 'components/logo';
+@import 'components/main-menu';
+@import 'components/main-menu-mobile';
+@import 'components/hamburger';
+@import 'components/buttons';
+@import 'components/call';
+@import 'components/title';
+@import 'components/content';
+@import 'components/intro';
+@import 'components/intro-image';
+@import 'components/strip';
+@import 'components/feature';
+@import 'components/social';
+
+// Pages
+@import 'pages/home';
+@import 'pages/team/team-summary';
+@import 'pages/services/page-services-single';
+
+
+/* Original padding-top was 6rem */
+body {
+  padding-top: 5rem;
+  padding-bottom: 0;
+  height: 100%;
+//  color: black; // used also for label color in masthead
+
+  @media (prefers-color-scheme: dark) {
+    color: black;
+    //background-color: black;
+  }
+
+  @media only print {
+    padding-top: 0;
+    color: black;
+  }
+}
+
+// From IRIS-HEP, edited 25 Nov 2020 MPK
+h1, h2, h4 {
+  font-family: $font-family-base;
+  color: $custom-100;
+}
+
+
+header.masthead {
+  //color: white;
+  //text-shadow: black 0px 0px 5px;
+  //margin-bottom: 0;
+  //margin-top: 55px;
+  background-color: #1E3040;
+  height: 188px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  @media only screen and (min-width: 768px) {
+    height: 375px;
+  }
+
+  .overlay {
+    height: 100%;
+    display: flex;
+    align-items: center;
+  }
+
+  .site-heading {
+    padding: 15px 0px 35px;
+    @media only screen and (min-width: 768px) {
+      padding: 40px 0px 80px;
+    }
+  }
+
+  .banner-title {
+    color: $brand-yellow;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 3rem;
+    font-weight: 700;
+    letter-spacing: 0.15em;
+    text-align: center;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.6);
+    margin-bottom: 0.3rem;
+    @media only screen and (min-width: 768px) {
+      font-size: 5rem;
+    }
+  }
+
+  .banner-subtitle {
+    color: $brand-yellow;
+    font-family: 'Merriweather', serif;
+    font-size: 1rem;
+    font-weight: 400;
+    font-style: italic;
+    text-align: center;
+    line-height: 1.5;
+    text-shadow: 0 1px 6px rgba(0, 0, 0, 0.6);
+    @media only screen and (min-width: 768px) {
+      font-size: 1.4rem;
+    }
+  }
+
+  .site-heading > h2 {
+    color: white;
+    font-size: 1.6rem;
+    font-weight: 600;
+    margin: 0;
+    @media only screen and (min-width: 768px), only print {
+      font-size: 2rem;
+    }
+  }
+}
+
+@media only print {
+  header.masthead .site-heading {
+    padding: 0;
+  }
+}
+
+%light-purple-header {
+    color: $secondary;
+    @media (prefers-color-scheme: dark) {
+      color: color.scale($success, $lightness:40%)
+    }
+}
+
+// Header
+
+.mainpage-all {
+
+  display: flex;
+  flex-flow: column;
+  @media only screen and (min-width: 768px) {
+    flex-flow: row wrap;
+  }
+}
+
+.mainpage-all > * {
+  flex: 1 100%;
+}
+
+@media only screen and (min-width: 768px) {
+  .mainpage-main {
+    flex: 2 0px;
+    margin-right: 10px;
+  }
+}
+
+main {
+  padding-top: 0px;
+}
+
+@media only screen and (min-width: 768px) {
+  main {
+    padding-top: 30px;
+  }
+}
+
+// Sidebar
+
+.mainpage-sidebar {
+  padding: 0px;
+  @media only screen and (min-width: 768px) {
+    flex: 1 0px;
+
+    padding: 0 8px 0 8px;
+
+  }
+
+  .mainpage-sidebar-links {
+    text-align: right;
+    margin-top: -10px;
+  }
+
+  .mainpage-core h4 {
+    //@extend %light-purple-header;
+    color: $custom-600;
+    font-size: 1.3rem;
+    margin-bottom: .2rem;
+  }
+
+  ul {
+    margin-top: 0.5rem;
+    margin-bottom: 1rem;
+    padding: 0px;
+    list-style: none;
+  }
+
+  .event {
+    display: flex;
+    flex-flow: row wrap;
+    margin: 5px 0 10px 0;
+    //old background-color: scale-color($secondary, $lightness:60%);
+    background-color: $brand-yellow;
+    border-radius: 6px;
+
+    .date, .location {
+      color: white;
+    }
+
+    .date {
+      background-color: $custom-200;
+      border-radius: 6px 0px 0px 0px;
+      flex: 0 2 35%;
+      font-size: 0.8rem;
+      padding: 0 5px 0 10px;
+    }
+
+    .location {
+      background-color: $custom-200;
+      border-radius: 0px 6px 0px 0px;
+      flex: 0 3 65%;
+      text-align: right;
+      font-style: italic;
+      font-size: 0.8rem;
+      padding: 0 10px 0 5px;
+    }
+
+    .name, .projects {
+      flex: 0 1 100%;
+      font-size: 1.1rem;
+      padding: 0 10px 0 10px;
+      color: black;
+    }
+
+    .projects p {
+      margin-top: .5rem;
+      margin-bottom: .5rem;
+      text-align: center;
+      color: $secondary;
+
+      a {
+        color: black;
+      }
+    }
+  }
+
+  .pub {
+    display: flex;
+    flex-flow: row wrap;
+    margin: 5px 0 10px 0;
+    //old background-color: scale-color($secondary, $lightness:60%);
+    background-color: $brand-yellow;
+    border-radius: 6px;
+
+    .year, .title {
+      color: white;
+    }
+
+    .title {
+      background-color: $custom-200;
+      border-radius: 6px 0px 0px 0px;
+      flex: 20 1 70%;
+      font-size: 0.8rem;
+      padding: 2px 5px 1px 10px;
+    }
+
+    .year {
+      background-color: $custom-200;
+      border-radius: 0px 6px 0px 0px;
+      flex: 1 1 auto;
+      text-align: right;
+      font-style: italic;
+      font-size: 0.8rem;
+      padding: 0 10px 0 5px;
+    }
+
+    .citation {
+      flex: 0 1 100%;
+      font-size: 1.1rem;
+      padding: 0 10px 0 10px;
+      color: black;
+    }
+  }
+}
+
+.mainpage-core {
+  margin: 10px 0 30px 0;
+
+}
+
+
+
+.mainpage-sidebar-twitter {
+  text-align: center;
+}
+
+// White links against a dark background
+.navbar-dark {
+  background-color: $brand-blue !important;
+  border-bottom-color: $primary-accent;
+  border-bottom-style: solid;
+  border-bottom-width: 3px;
+
+  .dropdown-menu {
+    background-color: $brand-blue;
+    border-color: rgba(255, 255, 255, 0.15);
+  }
+
+  .dropdown-item {
+    color: white;
+    &:hover, &:focus {
+      color: white;
+      background-color: rgba(255, 255, 255, 0.1);
+    }
+  }
+}
+
+
+
+// post styling 23 Sept 2020 MPK -- adapted from iris-hep
+.post {
+  .iris-post-footer {
+    clear: both;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    @media only screen and (min-width: 768px), only print {
+      margin-top: 40px;
+    }
+  }
+
+  img.banner {
+    width: 100%;
+    padding-bottom: 20px;
+  }
+
+  figure a img {
+    width: 100%;
+  }
+
+  figure.right {
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
+    @media only screen and (min-width: 991px), only print {
+      float: right;
+      width: 50%;
+      margin-left: 20px;
+    }
+  }
+
+  figure.center {
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
+    @media only screen and (min-width: 991px), only print {
+      width: 70%;
+    }
+  }
+
+  figure.caption {
+    @media only screen and (min-width: 991px), only print {
+      padding: 6px;
+      background-color: color.scale($custom-100, $lightness:60%);
+      @media (prefers-color-scheme: dark) {
+        background-color: $custom-100
+      }
+      border-radius: 6px;
+    }
+
+    a img {
+      @media only screen and (min-width: 991px), only print {
+        border-radius: 6px 6px 0px 0px;
+      }
+      margin-bottom: 6px;
+    }
+  }
+  a img {
+    width: 100%;
+  }
+}
+
+.alpha-head {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}

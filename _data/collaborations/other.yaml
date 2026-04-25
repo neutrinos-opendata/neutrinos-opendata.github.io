@@ -1,0 +1,19 @@
+
+- name: IAIFI AI Institute
+  url: https://iaifi.org
+
+- name: A3D3 Institute
+  url: https://a3d3.ai
+
+- name: CERN IML
+  url: https://iml.web.cern.ch
+
+- name: PyHEP
+  url: https://hepsoftwarefoundation.org/workinggroups/pyhep.html
+  
+- name: HEP Software Foundation
+  short: HSF
+  url: https://hepsoftwarefoundation.org
+  
+- name: US-RSE
+  url: http://us-rse.org

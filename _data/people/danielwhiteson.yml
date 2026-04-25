@@ -1,0 +1,19 @@
+name: Daniel Whiteson
+shortname: danielwhiteson
+title: Professor of Physics
+active: false
+institution: University of California, Irvine
+website: https://www.physics.uci.edu/people/daniel-o-whiteson
+photo: /assets/images/team/Daniel-Whiteson.jpg
+e-mail: daniel@uci.edu
+experiment: ATLAS/LHC
+presentations:
+  - title: "Foundations of a Fast, Data-Driven, Machine-Learned Simulator"
+    date: 2020-10-23
+    url: https://indico.cern.ch/event/852553/contributions/4059046/attachments/2128576/3584162/Howard_Jessica_4thIML2020SlidesFinal.pdf
+    meeting: "4th Inter-Experimental Machine Learning Workshop"
+    meetingurl: https://indico.cern.ch/event/852553/
+    location: CERN
+    project: ml4collider
+    focus-area:
+

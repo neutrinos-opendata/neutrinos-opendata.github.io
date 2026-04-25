@@ -1,0 +1,21 @@
+<header class="masthead" style="background-image: url('{{page.bgimage}}')">
+<div class="overlay">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-md-10 mx-auto">
+        <div class="site-heading blurb">
+          {% if page.banner_title %}
+            <div class="banner-title">{{ page.banner_title }}</div>
+            {% if page.banner_subtitle %}
+              <div class="banner-subtitle">{{ page.banner_subtitle }}</div>
+            {% endif %}
+          {% else %}
+            <center><h1>{{page.title}}</h1></center>
+          {% endif %}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</header>
+
